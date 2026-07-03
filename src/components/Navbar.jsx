@@ -24,8 +24,8 @@ function Navbar() {
 
   return (
     <header className="w-full z-50">
-      <div className="bg-[#214628] text-white text-[12px] sm:text-sm">
-        <div className="mx-auto max-w-7xl flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center px-4 sm:px-6 py-3">
+      <div className="hidden bg-[#214628] text-white text-[12px] sm:block sm:text-sm">
+        <div className="mx-auto max-w-7xl flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center px-4 sm:px-6 py-2.5 sm:py-3">
           <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-start text-white/90">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
               <FaPhoneAlt className="h-4 w-4 text-orange-300" />
@@ -45,7 +45,7 @@ function Navbar() {
               </a>
             </span>
           </div>
-          <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-end text-white/90">
+          <div className="hidden flex-wrap items-center gap-3 justify-center sm:flex sm:justify-end text-white/90">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
               <FaMapMarkerAlt className="h-4 w-4 text-orange-300" />
               Thenkanidiyoor, Udupi
@@ -59,21 +59,21 @@ function Navbar() {
       </div>
 
       <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
-        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
+        <div className="relative mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex items-center justify-between gap-3">
             <a
               href="#home"
               className="flex min-w-0 items-center gap-3"
               onClick={closeMenu}
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-3xl bg-orange-50 text-orange-600 shadow-sm">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-orange-50 text-orange-600 shadow-sm sm:h-12 sm:w-12 sm:rounded-3xl">
                 <FaShoppingBasket className="h-5 w-5" />
               </div>
               <div className="min-w-0">
-                <p className="text-base font-extrabold tracking-[0.18em] text-slate-900 leading-tight">
+                <p className="text-sm font-extrabold tracking-[0.12em] text-slate-900 leading-tight sm:text-base sm:tracking-[0.18em]">
                   CHANDANA
                 </p>
-                <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-slate-500 leading-none mt-0.5">
+                <p className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-slate-500 leading-none sm:text-[10px] sm:tracking-[0.26em]">
                   General Store
                 </p>
               </div>
@@ -98,6 +98,13 @@ function Navbar() {
             <div className="flex shrink-0 items-center gap-2">
               <a
                 href="tel:+917204192287"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-orange-50 text-orange-600 transition hover:bg-orange-100 sm:hidden"
+                aria-label="Call Chandana General Store"
+              >
+                <FaPhoneAlt className="h-4 w-4" />
+              </a>
+              <a
+                href="tel:+917204192287"
                 className="hidden items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-900/15 transition hover:bg-orange-700 sm:inline-flex"
               >
                 <FaPhoneAlt className="h-4 w-4" />
@@ -106,7 +113,7 @@ function Navbar() {
 
               <button
                 type="button"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm transition hover:border-orange-200 hover:text-orange-600 lg:hidden"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#214628] text-white shadow-lg shadow-slate-900/10 transition hover:bg-[#18351e] lg:hidden"
                 aria-label={
                   isMenuOpen ? "Close navigation menu" : "Open navigation menu"
                 }
@@ -126,26 +133,40 @@ function Navbar() {
           {isMenuOpen && (
             <nav
               id="mobile-navigation"
-              className="mt-4 grid gap-2 rounded-2xl border border-slate-100 bg-white p-3 shadow-lg lg:hidden"
+              className="absolute left-3 right-3 top-[calc(100%+8px)] overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/15 lg:hidden"
             >
-              {navLinks.map((link) => (
+              <div className="grid divide-y divide-slate-100">
+                {navLinks.map(({ href, label }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={closeMenu}
+                    className="px-5 py-3.5 text-sm font-semibold text-slate-800 transition hover:bg-orange-50 hover:text-orange-700"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 gap-2 bg-slate-50 p-3">
                 <a
-                  key={link.href}
-                  href={link.href}
+                  href="tel:+917204192287"
                   onClick={closeMenu}
-                  className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-orange-50 hover:text-orange-600"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700"
                 >
-                  {link.label}
+                  <FaPhoneAlt className="h-4 w-4" />
+                  Call
                 </a>
-              ))}
-              <a
-                href="tel:+917204192287"
-                onClick={closeMenu}
-                className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-orange-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700 sm:hidden"
-              >
-                <FaPhoneAlt className="h-4 w-4" />
-                Call Now
-              </a>
+                <a
+                  href="https://wa.me/919380864434"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={closeMenu}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-600"
+                >
+                  <FaWhatsapp className="h-4 w-4" />
+                  WhatsApp
+                </a>
+              </div>
             </nav>
           )}
         </div>

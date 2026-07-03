@@ -2,7 +2,7 @@
 
 function FloatingActions() {
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-5 right-5 z-50 hidden flex-col gap-3 sm:flex">
       <a
         href="https://wa.me/919380864434"
         target="_blank"

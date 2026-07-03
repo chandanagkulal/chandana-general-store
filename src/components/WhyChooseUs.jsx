@@ -42,15 +42,15 @@ const reasons = [
 
 function WhyChooseUs() {
   return (
-    <section id="why" className="bg-white py-20 scroll-mt-10">
+    <section id="why" className="bg-white py-14 scroll-mt-20 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Heading */}
-        <div className="mx-auto mb-14 max-w-2xl text-center">
-          <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-orange-600">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
+          <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:tracking-[0.25em]">
             Why Choose Us
           </span>
 
-          <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-6 sm:text-4xl">
             The Local Store You Can Count On
           </h2>
 
@@ -61,14 +61,14 @@ function WhyChooseUs() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {reasons.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="group rounded-3xl border border-slate-100 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:bg-white hover:shadow-md"
+              className="group rounded-2xl border border-slate-100 bg-slate-50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:bg-white hover:shadow-md sm:rounded-3xl sm:p-6"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-orange-100 text-orange-600 transition group-hover:bg-orange-600 group-hover:text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-100 text-orange-600 transition group-hover:bg-orange-600 group-hover:text-white sm:h-13 sm:w-13">
                   <Icon className="h-5 w-5" />
                 </div>
 

@@ -32,15 +32,15 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white py-20 scroll-mt-10">
+    <section id="contact" className="bg-white py-14 scroll-mt-20 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Heading */}
-        <div className="mx-auto mb-14 max-w-2xl text-center">
-          <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-orange-600">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
+          <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:tracking-[0.25em]">
             Contact
           </span>
 
-          <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-6 sm:text-4xl">
             Get in Touch With Us
           </h2>
 
@@ -52,7 +52,7 @@ function Contact() {
 
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Contact Info */}
-          <div className="rounded-3xl border border-slate-100 bg-slate-50 p-7 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5 shadow-sm sm:rounded-3xl sm:p-7">
             <h3 className="text-xl font-bold text-slate-900">
               Contact Details
             </h3>
@@ -63,7 +63,7 @@ function Contact() {
             </p>
 
             <div className="mt-7 space-y-4">
-              <div className="flex gap-4 rounded-2xl bg-white p-5 border border-slate-100">
+              <div className="flex gap-4 rounded-2xl bg-white p-4 border border-slate-100 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <FaPhoneAlt />
                 </div>
@@ -78,7 +78,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="flex gap-4 rounded-2xl bg-white p-5 border border-slate-100">
+              <div className="flex gap-4 rounded-2xl bg-white p-4 border border-slate-100 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">
                   <FaWhatsapp />
                 </div>
@@ -95,7 +95,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="flex gap-4 rounded-2xl bg-white p-5 border border-slate-100">
+              <div className="flex gap-4 rounded-2xl bg-white p-4 border border-slate-100 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <FaMapMarkerAlt />
                 </div>
@@ -107,7 +107,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="flex gap-4 rounded-2xl bg-white p-5 border border-slate-100">
+              <div className="flex gap-4 rounded-2xl bg-white p-4 border border-slate-100 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <FaClock />
                 </div>
@@ -130,14 +130,14 @@ function Contact() {
           </div>
 
           {/* Message Form */}
-          <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm sm:rounded-3xl sm:p-7">
             <div className="mb-7 flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
                 <FaPaperPlane className="h-5 w-5" />
               </div>
 
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-600">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:tracking-[0.25em]">
                   Send Message
                 </p>
                 <h3 className="mt-1 text-xl font-bold text-slate-900">
@@ -208,7 +208,7 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700"
                 >
                   <FaPaperPlane className="h-4 w-4" />
                   Send Message

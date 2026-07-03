@@ -2,14 +2,14 @@
 
 function Location() {
   return (
-    <section id="location" className="bg-slate-50 py-20 scroll-mt-10">
+    <section id="location" className="bg-slate-50 py-14 scroll-mt-20 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mx-auto mb-14 max-w-2xl text-center">
-          <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-orange-600">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
+          <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:tracking-[0.25em]">
             Location
           </span>
 
-          <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-6 sm:text-4xl">
             Visit Chandana General Store
           </h2>
 
@@ -21,7 +21,7 @@ function Location() {
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.2fr]">
           {/* Store Info */}
-          <div className="rounded-3xl border border-slate-100 bg-white p-7 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm sm:rounded-3xl sm:p-7">
             <h3 className="text-xl font-bold text-slate-900">
               Store Information
             </h3>
@@ -32,7 +32,7 @@ function Location() {
             </p>
 
             <div className="mt-7 space-y-4">
-              <div className="flex gap-4 rounded-2xl bg-slate-50 p-5">
+              <div className="flex gap-4 rounded-2xl bg-slate-50 p-4 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <FaMapMarkerAlt />
                 </div>
@@ -44,7 +44,7 @@ function Location() {
                 </div>
               </div>
 
-              <div className="flex gap-4 rounded-2xl bg-slate-50 p-5">
+              <div className="flex gap-4 rounded-2xl bg-slate-50 p-4 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <FaClock />
                 </div>
@@ -64,7 +64,7 @@ function Location() {
                 </div>
               </div>
 
-              <div className="flex gap-4 rounded-2xl bg-slate-50 p-5">
+              <div className="flex gap-4 rounded-2xl bg-slate-50 p-4 sm:p-5">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <FaPhoneAlt />
                 </div>
@@ -104,11 +104,11 @@ function Location() {
           </div>
 
           {/* Map */}
-          <div className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm">
+          <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm sm:rounded-3xl">
             <iframe
               title="store-location-map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.2036721081514!2d74.71086311130635!3d13.370329000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbd006f30cea9%3A0x73ed94d546ada3be!2sChandana%20General%20Stores!5e0!3m2!1sen!2sin!4v1700000000000"
-              className="h-[520px] w-full border-0"
+              className="h-[320px] w-full border-0 sm:h-[520px]"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -138,10 +138,10 @@ function Contact() {
 
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:tracking-[0.25em]">
-                  Send Message
+                  Send on WhatsApp
                 </p>
                 <h3 className="mt-1 text-xl font-bold text-slate-900">
-                  Message the Store
+                  Message the Store on WhatsApp
                 </h3>
               </div>
             </div>
@@ -149,11 +149,11 @@ function Contact() {
             {submitted ? (
               <div className="rounded-3xl border border-orange-100 bg-orange-50 p-8 text-center">
                 <p className="text-lg font-bold text-orange-700">
-                  Message sent successfully!
+                  WhatsApp message opened!
                 </p>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Thank you for contacting us. We will respond by call or
-                  WhatsApp soon.
+                  Complete sending the message in WhatsApp. We will respond by
+                  call or WhatsApp soon.
                 </p>
               </div>
             ) : (
@@ -211,7 +211,7 @@ function Contact() {
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700"
                 >
                   <FaPaperPlane className="h-4 w-4" />
-                  Send Message
+                  Send on WhatsApp
                 </button>
               </form>
             )}

@@ -16,8 +16,8 @@ function Footer() {
 
   return (
     <footer className="border-t border-orange-100 bg-[#fff6ed] text-slate-800">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
-        <div className="flex flex-col gap-6 border-b border-orange-100 pb-6 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:py-12">
+        <div className="grid gap-8 border-b border-orange-100 pb-8 lg:grid-cols-[1.25fr_0.65fr_1.15fr] lg:items-start">
           <div className="max-w-md">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
@@ -39,47 +39,60 @@ function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-x-5 gap-y-2 sm:max-w-md sm:justify-end">
-            {quickLinks.map((link) => (
+          <div>
+            <h4 className="text-xs font-black uppercase tracking-[0.22em] text-orange-600">
+              Links
+            </h4>
+            <div className="mt-4 grid grid-cols-2 gap-x-5 gap-y-2 text-sm lg:grid-cols-1">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="font-semibold text-slate-600 transition hover:text-orange-600"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-black uppercase tracking-[0.22em] text-orange-600">
+              Contact
+            </h4>
+            <div className="mt-4 space-y-3 text-sm text-slate-600">
+              <p className="flex items-start gap-3">
+                <FaMapMarkerAlt className="mt-1 h-4 w-4 shrink-0 text-orange-600" />
+                <span>9PC7+968, Thenkanidiyoor, Udupi, Karnataka 576106</span>
+              </p>
+
               <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold text-slate-600 transition hover:text-orange-600"
+                href="tel:+917204192287"
+                className="flex items-center gap-3 font-semibold transition hover:text-orange-600"
               >
-                {link.label}
+                <FaPhoneAlt className="h-4 w-4 shrink-0 text-orange-600" />
+                +91 72041 92287
               </a>
-            ))}
+
+              <a
+                href="https://wa.me/919380864434"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 font-semibold transition hover:text-orange-600"
+              >
+                <FaWhatsapp className="h-4 w-4 shrink-0 text-emerald-600" />
+                WhatsApp chat
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="grid gap-4 py-6 text-sm text-slate-600 sm:grid-cols-3">
-          <p className="flex items-start gap-3">
-            <FaMapMarkerAlt className="mt-1 h-4 w-4 shrink-0 text-orange-600" />
-            <span>9PC7+968, Thenkanidiyoor, Udupi, Karnataka 576106</span>
+        <div className="flex flex-col gap-2 pt-5 text-[11px] font-medium text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p className="leading-5 sm:whitespace-nowrap">
+            &copy; 2026 Chandana General Store &middot; Built for local shoppers
           </p>
-
-          <a
-            href="tel:+917204192287"
-            className="flex items-center gap-3 font-semibold transition hover:text-orange-600"
-          >
-            <FaPhoneAlt className="h-4 w-4 shrink-0 text-orange-600" />
-            +91 72041 92287
-          </a>
-
-          <a
-            href="https://wa.me/919380864434"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 font-semibold transition hover:text-orange-600"
-          >
-            <FaWhatsapp className="h-4 w-4 shrink-0 text-emerald-600" />
-            WhatsApp chat
-          </a>
+          <p>Open daily for fresh essentials</p>
         </div>
-
-        <p className="border-t border-orange-100 pt-5 text-[11px] font-medium text-slate-500 whitespace-nowrap">
-          © 2026 Chandana General Store · Built for local shoppers
-        </p>
       </div>
     </footer>
   );

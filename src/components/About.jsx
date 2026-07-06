@@ -15,7 +15,7 @@ function About() {
 
   return (
     <section id="about" className="bg-white py-14 scroll-mt-20 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:w-[90%] lg:max-w-none lg:px-0">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:text-sm sm:tracking-[0.25em]">

@@ -8,6 +8,8 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
+  const mapUrl =
+    "https://www.google.com/maps/place/Chandana+General+Stores/@13.370329,74.713438,17z/data=!4m6!3m5!1s0x3bbcbd006f30cea9:0x73ed94d546ada3be!8m2!3d13.370329!4d74.713438!16s%2Fg%2F11z87x1__z";
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -33,7 +35,7 @@ function Contact() {
 
   return (
     <section id="contact" className="bg-white py-14 scroll-mt-20 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:w-[90%] lg:max-w-none lg:px-0">
         {/* Heading */}
         <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
           <span className="inline-block rounded-full bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-orange-600 sm:tracking-[0.25em]">
@@ -101,9 +103,14 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-slate-900">Address</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">
+                  <a
+                    href={mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block text-sm font-semibold leading-6 text-slate-600 transition hover:text-orange-600"
+                  >
                     9PC7+968, Thenkanidiyoor, Udupi, Karnataka 576106
-                  </p>
+                  </a>
                 </div>
               </div>
 

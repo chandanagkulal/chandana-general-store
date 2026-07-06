@@ -10,7 +10,7 @@ function Gallery() {
 
   return (
     <section id="gallery" className="bg-slate-50 py-20 scroll-mt-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:w-[90%] lg:max-w-none lg:px-0">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">

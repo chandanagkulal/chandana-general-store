@@ -23,9 +23,9 @@ function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="w-full z-50">
+    <header className="sticky top-0 z-50 w-full">
       <div className="hidden bg-[#214628] text-white text-[12px] sm:block sm:text-sm">
-        <div className="mx-auto max-w-7xl flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center px-4 sm:px-6 py-2.5 sm:py-3">
+        <div className="mx-auto flex w-full flex-col gap-2 px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-3 lg:w-[90%] lg:max-w-none lg:px-0">
           <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-start text-white/90">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
               <FaPhoneAlt className="h-4 w-4 text-orange-300" />
@@ -58,8 +58,8 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
-        <div className="relative mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4">
+      <div className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+        <div className="relative mx-auto w-full px-4 py-3 sm:px-6 sm:py-4 lg:w-[90%] lg:max-w-none lg:px-0">
           <div className="flex items-center justify-between gap-3">
             <a
               href="#home"

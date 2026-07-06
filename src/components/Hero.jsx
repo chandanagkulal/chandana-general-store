@@ -1,38 +1,40 @@
-﻿import { FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaStore } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt, FaStore } from "react-icons/fa";
+import heroImage from "../assets/images/hero-store.png";
 
 function Hero() {
-  const bgImage =
-    "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80";
-
   return (
     <section
       id="home"
-      className="relative min-h-[calc(100vh-65px)] overflow-hidden sm:min-h-[90vh]"
+      className="relative min-h-[62vh] overflow-hidden sm:min-h-[90vh]"
     >
       <div
         className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{ backgroundImage: `url(${heroImage})` }}
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/70 sm:bg-gradient-to-r sm:from-black/75 sm:via-black/45 sm:to-black/20" />
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-65px)] max-w-7xl items-center px-4 py-12 sm:min-h-[90vh] sm:px-6 sm:py-20 lg:px-8">
+      <div className="relative mx-auto flex min-h-[62vh] max-w-7xl items-center px-4 py-10 sm:min-h-[90vh] sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-3xl text-white">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] backdrop-blur-md sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.25em]">
             <FaStore />
             Local Family-Owned Store
           </div>
 
-          <h1 className="max-w-[12ch] text-[2.65rem] font-extrabold leading-[1.05] tracking-normal sm:max-w-none sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-full whitespace-nowrap text-[clamp(1.35rem,6.5vw,2.05rem)] font-extrabold leading-tight tracking-tight sm:text-6xl sm:tracking-normal lg:text-7xl">
             Chandana General Store
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:mt-6 sm:text-xl sm:leading-relaxed">
+          <p className="mt-5 hidden max-w-2xl text-base leading-7 text-white/90 sm:mt-6 sm:block sm:text-xl sm:leading-relaxed">
             Fresh groceries, fruits, vegetables, dairy products, snacks,
             beverages, household essentials, and everyday needs available here.
           </p>
 
-          <div className="mt-7 grid grid-cols-3 gap-2 sm:mt-8 sm:flex sm:flex-wrap sm:gap-4">
+          <p className="mt-3 max-w-xs text-sm font-medium leading-6 text-white/90 sm:hidden">
+            Fresh groceries and daily essentials in Thenkanidiyoor.
+          </p>
+
+          <div className="mt-6 grid grid-cols-3 gap-2 sm:mt-8 sm:flex sm:flex-wrap sm:gap-4">
             <a
               href="tel:+917204192287"
               className="inline-flex items-center justify-center gap-1.5 rounded-full bg-orange-500 px-2 py-3 text-xs font-semibold text-white shadow-lg shadow-black/15 transition hover:bg-orange-600 sm:gap-2 sm:px-6 sm:text-sm"

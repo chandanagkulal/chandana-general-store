@@ -8,18 +8,11 @@ import {
 function Footer() {
   const mapUrl =
     "https://www.google.com/maps/place/Chandana+General+Stores/@13.370329,74.713438,17z/data=!4m6!3m5!1s0x3bbcbd006f30cea9:0x73ed94d546ada3be!8m2!3d13.370329!4d74.713438!16s%2Fg%2F11z87x1__z";
-  const quickLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Products", href: "#products" },
-    { label: "Location", href: "#location" },
-    { label: "Contact", href: "#contact" },
-  ];
 
   return (
     <footer className="border-t border-orange-100 bg-[#fff6ed] text-slate-800">
       <div className="mx-auto w-full px-4 py-10 sm:px-6 lg:w-[90%] lg:max-w-none lg:px-0 lg:py-12">
-        <div className="grid gap-8 border-b border-orange-100 pb-8 lg:grid-cols-[1.25fr_0.65fr_1.15fr] lg:items-start">
+        <div className="grid gap-8 border-b border-orange-100 pb-8 lg:grid-cols-[1.25fr_1.15fr] lg:items-start">
           <div className="max-w-md">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-100 text-orange-600">
@@ -39,23 +32,6 @@ function Footer() {
               Fresh groceries, snacks, dairy, household essentials, and daily
               needs for local shoppers in Thenkanidiyoor.
             </p>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.22em] text-orange-600">
-              Links
-            </h4>
-            <div className="mt-4 grid grid-cols-2 gap-x-5 gap-y-2 text-sm lg:grid-cols-1">
-              {quickLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="font-semibold text-slate-600 transition hover:text-orange-600"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>

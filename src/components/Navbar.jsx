@@ -1,8 +1,6 @@
 import { useState } from "react";
 import {
   FaBars,
-  FaClock,
-  FaMapMarkerAlt,
   FaPhoneAlt,
   FaShoppingBasket,
   FaTimes,
@@ -24,40 +22,6 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className="hidden bg-[#214628] text-white text-[12px] sm:block sm:text-sm">
-        <div className="mx-auto flex w-full flex-col gap-2 px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-3 lg:w-[90%] lg:max-w-none lg:px-0">
-          <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-start text-white/90">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
-              <FaPhoneAlt className="h-4 w-4 text-orange-300" />
-              <a href="tel:+917204192287" className="hover:text-orange-300">
-                +91 72041 92287
-              </a>
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
-              <FaWhatsapp className="h-4 w-4 text-emerald-300" />
-              <a
-                href="https://wa.me/919380864434"
-                className="hover:text-orange-300"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WhatsApp
-              </a>
-            </span>
-          </div>
-          <div className="hidden flex-wrap items-center gap-3 justify-center sm:flex sm:justify-end text-white/90">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
-              <FaMapMarkerAlt className="h-4 w-4 text-orange-300" />
-              Thenkanidiyoor, Udupi
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] sm:text-sm">
-              <FaClock className="h-4 w-4 text-orange-300" />
-              7:00 AM - 1:30 PM | 3:30 PM - 9:30 PM
-            </span>
-          </div>
-        </div>
-      </div>
-
       <div className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
         <div className="relative mx-auto w-full px-4 py-3 sm:px-6 sm:py-4 lg:w-[90%] lg:max-w-none lg:px-0">
           <div className="flex items-center justify-between gap-3">

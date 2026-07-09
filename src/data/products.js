@@ -1,14 +1,25 @@
-const imageUrl = (relativePath) => new URL(relativePath, import.meta.url).href;
+import biscuitsImage from "../assets/images/biscuits.jpg";
+import chocolatesImage from "../assets/images/chocolates.jpg";
+import dairyImage from "../assets/images/dairy.jpg";
+import fruitsImage from "../assets/images/fruits.jpg";
+import householdImage from "../assets/images/household.jpg";
+import personalCareImage from "../assets/images/personalcare.jpg";
+import pulsesImage from "../assets/images/pulses.jpg";
+import riceImage from "../assets/images/rice.jpg";
+import softDrinksImage from "../assets/images/softdrinks.jpg";
+import spicesImage from "../assets/images/spices.jpg";
+import stationeryImage from "../assets/images/stationery.jpg";
+import vegetablesImage from "../assets/images/vegetables.jpg";
 
 export const productCategories = [
   {
     title: "Fresh Vegetables",
-    image: imageUrl("../assets/images/vegetables.jpg"),
+    image: vegetablesImage,
     items: ["Tomato", "Onion", "Potato", "Carrot", "Beans", "Leafy greens"],
   },
   {
     title: "Fresh Fruits",
-    image: imageUrl("../assets/images/fruits.jpg"),
+    image: fruitsImage,
     items: [
       "Banana",
       "Apple",
@@ -20,17 +31,17 @@ export const productCategories = [
   },
   {
     title: "Dairy Products",
-    image: imageUrl("../assets/images/dairy.jpg"),
+    image: dairyImage,
     items: ["Milk", "Curd", "Butter", "Paneer", "Cheese", "Lassi"],
   },
   {
     title: "Rice & Grains",
-    image: imageUrl("../assets/images/rice.jpg"),
+    image: riceImage,
     items: ["Rice", "Wheat", "Rava", "Poha", "Flour", "Semolina"],
   },
   {
     title: "Pulses",
-    image: imageUrl("../assets/images/pulses.jpg"),
+    image: pulsesImage,
     items: [
       "Toor dal",
       "Moong dal",
@@ -42,7 +53,7 @@ export const productCategories = [
   },
   {
     title: "Spices & Masalas",
-    image: imageUrl("../assets/images/spices.jpg"),
+    image: spicesImage,
     items: [
       "Chilli powder",
       "Turmeric",
@@ -54,12 +65,12 @@ export const productCategories = [
   },
   {
     title: "Biscuits & Snacks",
-    image: imageUrl("../assets/images/biscuits.jpg"),
+    image: biscuitsImage,
     items: ["Biscuits", "Chips", "Namkeen", "Cakes", "Mixture", "Cookies"],
   },
   {
     title: "Soft Drinks",
-    image: imageUrl("../assets/images/softdrinks.jpg"),
+    image: softDrinksImage,
     items: [
       "Cold drinks",
       "Juice",
@@ -71,7 +82,7 @@ export const productCategories = [
   },
   {
     title: "Chocolates",
-    image: imageUrl("../assets/images/chocolates.jpg"),
+    image: chocolatesImage,
     items: [
       "Chocolate bars",
       "Candies",
@@ -83,12 +94,12 @@ export const productCategories = [
   },
   {
     title: "Personal Care",
-    image: imageUrl("../assets/images/personalcare.jpg"),
+    image: personalCareImage,
     items: ["Soap", "Shampoo", "Toothpaste", "Toothbrush", "Hair oil", "Face wash"],
   },
   {
     title: "Household Essentials",
-    image: imageUrl("../assets/images/household.jpg"),
+    image: householdImage,
     items: [
       "Detergent",
       "Dishwash",
@@ -100,7 +111,7 @@ export const productCategories = [
   },
   {
     title: "Stationery",
-    image: imageUrl("../assets/images/stationery.jpg"),
+    image: stationeryImage,
     items: ["Pens", "Pencils", "Notebooks", "Erasers", "Sharpeners", "School supplies"],
   },
 ];
